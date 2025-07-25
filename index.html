@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>작물 상자 가격 계산기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 우측 상단 다크모드 토글 버튼 -->
+<div class="theme-toggle" onclick="toggleTheme()" title="다크모드 전환">
+  <span id="theme-icon">🌙</span>
+</div>
+
+<h1>작물 상자 가격 계산기</h1>
+
+<div id="selector" class="card">
+  <label>작물 선택: 
+    <select id="crop-select"></select>
+  </label>
+  <button onclick="editPrice()">가격 수정</button>
+  <button onclick="showPrices()">가격 표시</button>
+</div>
+
+<div id="price-editor" class="card" style="display: none;">
+  <p><strong><span id="edit-name"></span></strong>의 단가 변경</p>
+  <input type="number" id="price-input" step="0.01"> DP
+  <button onclick="savePrice()">저장</button>
+</div>
+
+<div id="price-result" class="card" style="display: none;"></div>
+
+<div id="footer">
+  <p>Update 2025-07-25 22:00</p>
+  <p>Made by busi</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

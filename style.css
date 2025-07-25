@@ -1,0 +1,109 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #222;
+  --card-bg: #fff;
+  --input-bg: #fff;
+  --select-bg: #fff;
+  --primary-color: #6c63ff;
+}
+
+body[data-theme='dark'] {
+  --bg-color: #1e1e1e;
+  --text-color: #f4f4f4;
+  --card-bg: #2c2c2c;
+  --input-bg: #3a3a3a;
+  --select-bg: #3a3a3a;
+}
+
+body {
+  font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 40px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  transition: background 0.3s;
+}
+
+select, input[type='number'], button {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+select {
+  background-color: var(--select-bg);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+/* 우측 상단 다크모드 버튼 */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-color);
+  z-index: 1000;
+}
+
+/* 하단 정보 */
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.5;
+}
